@@ -32,17 +32,3 @@ Updates the owner of a subnode. For instance, the owner of "foo.com" may change 
 
 ## setResolver(bytes32 node, address resolver)
 Sets the resolver address for the specified node.
-
-# Resolver interface
-
-Resolvers must implement one mandatory method, `has`, and may implement any number of other resource-type specific methods. Resolvers must `throw` when an unimplemented method is called.
-
-## has(bytes32 node, bytes32 kind) constant returns (bool)
-
-Returns true if the specified node has the specified record kind available. Record kinds are defined by each resolver type and standardised in EIPs; currently only "addr" is supported.
-
-`has()` must return false if the corresponding record type specific methods will throw if called.
-
-## addr(bytes32 node) constant returns (address ret)
-
-Implements the addr resource type. Returns the Ethereum address associated with a node if it exists, or `throw`s if it does not.
