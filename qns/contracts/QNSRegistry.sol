@@ -1,29 +1,6 @@
-pragma solidity ^0.4.16;
+pragma solidity ^0.4.18;
 
-interface QNS {
-
-    // Logged when the owner of a node assigns a new owner to a subnode.
-    event NewOwner(bytes32 indexed node, bytes32 indexed label, address owner);
-
-    // Logged when the owner of a node transfers ownership to a new account.
-    event Transfer(bytes32 indexed node, address owner);
-
-    // Logged when the resolver for a node changes.
-    event NewResolver(bytes32 indexed node, address resolver);
-
-    // Logged when the TTL of a node changes
-    event NewTTL(bytes32 indexed node, uint64 ttl);
-
-
-    function setSubnodeOwner(bytes32 node, bytes32 label, address owner) public;
-    function setResolver(bytes32 node, address resolver) public;
-    function setOwner(bytes32 node, address owner) public;
-    function setTTL(bytes32 node, uint64 ttl) public;
-    function owner(bytes32 node) public view returns (address);
-    function resolver(bytes32 node) public view returns (address);
-    function ttl(bytes32 node) public view returns (uint64);
-
-}
+import './QNS.sol';
 
 /**
  * The QNS registry contract.
@@ -46,7 +23,7 @@ contract QNSRegistry is QNS {
     /**
      * @dev Constructs a new QNS registrar.
      */
-    function ENSRegistry() public {
+    function QNSRegistry() public {
         records[0x0].owner = msg.sender;
     }
 
@@ -93,7 +70,7 @@ contract QNSRegistry is QNS {
     }
 
     /**
-     * @dev Returns the address that owns the specified node.
+     * @dev Returns the address that oQNS the specified node.
      * @param node The specified node.
      * @return address of the owner.
      */
