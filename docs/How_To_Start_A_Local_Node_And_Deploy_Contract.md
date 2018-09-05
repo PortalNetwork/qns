@@ -20,7 +20,8 @@ Pull the latest image version
 
 Now we can using the latest image version start a node ( testnet )
 
-`$ docker run -it --rm \
+```
+$ docker run -it --rm \
 --name myapp \
 -e "QTUM_NETWORK=testnet" \
 -v `pwd`:/dapp \
@@ -39,15 +40,16 @@ As soon as we start a node, our log will looks like this
 03:43:23  qtumd | 2018-09-04 03:43:23
 03:43:23  qtumd | 2018-09-04 03:43:23 Qtum version mainnet-ignition-v0.15.2
 03:43:23  qtumd | 2018-09-04 03:43:23 InitParameterInteraction: parameter interaction: -whitelistforcerelay=1 -> setting -whitelistrelay=1
-`
+```
 
 Take a look of our docker
 
-`$ docker ps`
+```
+$ docker ps`
 
 `CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                                                                                        NAMES
 a33867ebe8a3        hayeah/qtumportal   "/bin/sh -c 'mkdir -…"   42 seconds ago      Up 42 seconds       0.0.0.0:3889->3889/tcp, 0.0.0.0:9888->9888/tcp, 0.0.0.0:9899->9899/tcp, 3888/tcp, 0.0.0.0:13888->13888/tcp   myapp
-`
+```
 Our NAMES is “myapp” using exec -it
 `$docker exec -it myapp sh`
 
@@ -55,7 +57,8 @@ Our NAMES is “myapp” using exec -it
 
 Now we can use qcli to operate
 
-` /dapp # qcli getinfo
+```
+/dapp # qcli getinfo
 {
 "deprecation-warning": "WARNING: getinfo is deprecated and will be fully removed in 0.16. Projects should transition to using getblockchaininfo, getnetworkinfo, and getwalletinfo before upgrading to 0.16",
 "version": 150200,
@@ -78,14 +81,17 @@ Now we can use qcli to operate
 "paytxfee": 0.00000000,
 "relayfee": 0.00400000,
 "errors": ""
-}`
+}
+```
 
 ## Request Testnet Token On Qtum
 
 Lets open a new wallet and request some testnet token first, in order to deploy a contract
 
-`/dapp# qcli getnewaddress
-qRX4jHmjR5X3y2xkMYMF6fuZ2H2M1dP11m`
+```
+/dapp# qcli getnewaddress
+qRX4jHmjR5X3y2xkMYMF6fuZ2H2M1dP11m
+```
 
 We open a new wallet with address: “qRX4jHmjR5X3y2xkMYMF6fuZ2H2M1dP11m”
 Now we can use this address to request testnet token
@@ -114,17 +120,21 @@ Using solar to deploy contract
 
 if success our log will look like this:
 
-`🚀  All contracts confirmed
-deployed QNSRegistry.sol => 4d4b1c4a5111cb7c1fd469596204b841754c8497`
+```
+🚀  All contracts confirmed
+deployed QNSRegistry.sol => 4d4b1c4a5111cb7c1fd469596204b841754c8497
+```
 
 We can use #solar status to see the detail of this contract
 
-`/dapp/qtoken/qns/QNSRegistry # solar status
+```
+/dapp/qtoken/qns/QNSRegistry # solar status
 ✅  QNSRegistry.sol
 txid: 4b0c1fc1ce8528820a3ce104263174523ac323daaa37bde252d8ca7720ee1065
 address: 4d4b1c4a5111cb7c1fd469596204b841754c8497
 confirmed: true
-owner: qRX4jHmjR5X3y2xkMYMF6fuZ2H2M1dP11m`
+owner: qRX4jHmjR5X3y2xkMYMF6fuZ2H2M1dP11m
+```
 
 ##  Abiplay Interact With Your Contract
 
@@ -135,18 +145,3 @@ After deploy our contract with solar, solar will generate a json file name “so
 chose “solar.development.json” from abiplay
 
 ![alt text](../img/abiplay.png )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
