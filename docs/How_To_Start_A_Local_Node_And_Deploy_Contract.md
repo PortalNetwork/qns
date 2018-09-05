@@ -1,8 +1,5 @@
 # How to start a Qtum node and deploy contract on it
 
-## From zero to hero
-
-
 ## Requirements:
 
 OS: MacOS
