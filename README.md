@@ -20,6 +20,7 @@ QNS is the QTUM Name Service, a distributed, open, and extensible naming system 
 - [Integration](./docs/INTEGRATION.md)
 
 ## 📝 Guideline
+- [How To Start A Local Node And Deploy Contract](./docs/How_To_Start_A_Local_Node_And_Deploy_Contrac.md)
 - [Smart Contract Testing](./qns/README.md)
 - [Smart Contract Design Principle](./docs/SMART_CONTRACT_DESIGN_PRINCIPLE.md)
 
