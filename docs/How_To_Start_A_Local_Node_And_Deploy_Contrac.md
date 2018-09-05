@@ -93,7 +93,7 @@ Now we can use this address to request testnet token
 [Qtum testnet faucet]( http://testnet-faucet.qtum.info/#!/)
 
 
-![alt text](../img/testnet )
+![alt text](../img/testnet.png )
 
 
 paste your address on it, and faucet will send their testnet token to you, you can only request once in 24hr.
@@ -101,7 +101,7 @@ wait for a while then you can check your balance
 
 `/dapp# qcli getbalance`
 `96.00000000`
-![alt text](../img/testnet_address )
+![alt text](../img/testnet_address.png )
 
 ## Using Solar Deploy contract
 
@@ -134,7 +134,7 @@ After deploy our contract with solar, solar will generate a json file name “so
 
 chose “solar.development.json” from abiplay
 
-![alt text](../img/abiplay )
+![alt text](../img/abiplay.png )
 
 
 
