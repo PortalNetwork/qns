@@ -3,9 +3,9 @@
 ## QNS Smart Contracts
 
 The link of QNS smart contract as below:
-- [QNSRegsitry.sol](../QNS/QNSRegistry.sol)
-- [QNSRegistrar.sol](../QNS/QNSRegistrar.sol)
-- [QNSResolver.sol](../QNS/QNSResolver.sol)
+- [QNSRegsitry.sol](../qns/contracts/QNSRegistry.sol)
+- [QNSRegistrar.sol](../qns/contracts/QNSRegistrar.sol)
+- [QNSResolver.sol](../qns/contracts/QNSResolver.sol)
 
 ## QNS Spec
 
