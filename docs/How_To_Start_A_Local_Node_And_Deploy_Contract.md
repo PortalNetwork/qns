@@ -26,11 +26,13 @@ $ docker run -it --rm \
 -p 9888:9888 \
 -p 3889:3889 \
 -p 13888:13888 \
-hayeah/qtumportal`
+hayeah/qtumportal
+```
 
 As soon as we start a node, our log will looks like this
 
-`03:43:22  qtumd | Starting qtumd on port 5000
+```
+03:43:22  qtumd | Starting qtumd on port 5000
 03:43:22 portal | Starting portal on port 5001
 03:43:22 portal | time="2018-09-04T03:43:22Z" level=info msg="DApp service listening 0.0.0.0:9888"
 03:43:22 portal | time="2018-09-04T03:43:22Z" level=info msg="Auth service listening 0.0.0.0:9899"
@@ -42,15 +44,22 @@ As soon as we start a node, our log will looks like this
 Take a look of our docker
 
 ```
-$ docker ps`
+$ docker ps
+```
 
-`CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                                                                                        NAMES
+```
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                                                                                        NAMES
 a33867ebe8a3        hayeah/qtumportal   "/bin/sh -c 'mkdir -…"   42 seconds ago      Up 42 seconds       0.0.0.0:3889->3889/tcp, 0.0.0.0:9888->9888/tcp, 0.0.0.0:9899->9899/tcp, 3888/tcp, 0.0.0.0:13888->13888/tcp   myapp
 ```
-Our NAMES is “myapp” using exec -it
-`$docker exec -it myapp sh`
 
-`/dapp #`
+Our NAMES is “myapp” using exec -it
+```
+$docker exec -it myapp sh
+```
+
+```
+/dapp #
+```
 
 Now we can use qcli to operate
 
